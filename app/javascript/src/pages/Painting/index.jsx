@@ -11,6 +11,10 @@ const Painting = () => {
   return (
     <div>
       <h1>{element?.name}</h1>
+      <img
+        src={require("../../assets/images/" + queryId + ".jpg")}
+        alt={element?.name}
+      />
       <p>{element?.description}</p>
       <h6>{element?.format} cm</h6>
       <h6>{element?.year}</h6>
