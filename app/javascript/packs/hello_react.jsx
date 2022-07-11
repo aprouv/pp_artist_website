@@ -1,50 +1,44 @@
-// Run this example by adding <%= javascript_pack_tag 'hello_react' %> to the head of your layout file,
-// like app/views/layouts/application.html.erb. All it does is render <div>Hello React</div> at the bottom
-// of the page.
-
-// import React from 'react'
-// import ReactDOM from 'react-dom'
-// import PropTypes from 'prop-types'
-
-// const Hello = props => (
-//   <div>Helloooooooooooooooooooooooooooooooooooooo {props.name}!</div>
-// )
-
-// Hello.defaultProps = {
-//   name: 'David'
-// }
-
-// Hello.propTypes = {
-//   name: PropTypes.string
-// }
-
-// document.addEventListener('DOMContentLoaded', () => {
-//   ReactDOM.render(
-//     <Hello name="React" />,
-//     document.body.appendChild(document.createElement('div')),
-//   )
-// })
-
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "../src/pages/Home";
 import Paintings from "../src/pages/Paintings";
 import Painting from "../src/pages/Painting";
 import Biography from "../src/pages/Biography";
 import Contact from "../src/pages/Contact";
+import styled from "styled-components";
+import Header from "../src/components/Header";
+import HomeTemplate from "../src/components/HomeTemplate"
+import PagesTemplate from "../src/components/PagesTemplate";
+
+const GlobalStyle = styled.div`
+  * {
+    font-family: "Roboto Flex", sans serif;
+  }
+  font-weight: 100;
+ margin: 0px;
+`;
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(
-    <Router>
-      <Routes>
-        <Route exact path="/" element={<Home />} />
-        <Route path="/biography" element={<Biography />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/tableaux" element={<Paintings />} />
-        <Route path="/tableaux/:id" element={<Painting />} />
-      </Routes>
-    </Router>,
+    <BrowserRouter>
+      <GlobalStyle>
+
+        <Routes>
+          <Route path="" element={<PagesTemplate />}>
+            <Route path="biographie" element={<Biography />} />
+            <Route path="contact" element={<Contact />} />
+            <Route path="tableaux" element={<Paintings />} />
+            <Route path="tableaux/:id" element={<Painting />} />
+          </Route>
+          <Route exact path="/" element={<HomeTemplate />}>
+            <Route index element={<Home />} />
+          </Route>
+        </Routes>
+      </GlobalStyle>
+    </BrowserRouter>,
     document.body.appendChild(document.createElement("div"))
   );
 });
