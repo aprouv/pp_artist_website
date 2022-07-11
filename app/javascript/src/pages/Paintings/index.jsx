@@ -1,15 +1,35 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
 import FilterMenu from "../../components/FilterMenu";
 import useFetch from "../../utils/hooks";
 import PaintingsGrid from "../../components/PaintingsGrid";
-import FilterBy from "../../components/FilterBy";
 import { useSearchParams } from "react-router-dom";
+import styled from "styled-components";
+import colors from "../../utils/style/colors";
+
+const Quote = styled.div`
+  height: 60px;
+  margin-top: 72px;
+  font-weight: 100;
+  line-height: 39px;
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-align: center;
+`;
+
+const QuotationMarks = styled.span`
+color: ${colors.tertiary};
+font-weight: bold;
+font-size: 30px;
+`
 
 const Paintings = () => {
   const [paintings] = useFetch("/api/v1/paintings");
-  const [option, selectOption] = useState("All");
-  const selectedOption = (e) => selectOption(e.target.value);
+  const [option, selectOption] = useState("all");
+  // const selectedOption = (e) => selectOption(e.target.value);
+  const selectedOption = (value) => {
+    const option = value.value;
+    selectOption(option);
+  };
 
   let [searchParams] = useSearchParams();
   let year = searchParams.get("year");
@@ -18,13 +38,12 @@ const Paintings = () => {
 
   return (
     <div>
-      <h1>Tableaux</h1>
+      <Quote>
+        <QuotationMarks>"</QuotationMarks> Si la toile émeut, plaît, interroge, dérange, et si de surcroît parfois
+        elle peut véhiculer une idée, témoigner, <br />secouer des idées, alors le
+        peintre peut être satisfait. <QuotationMarks>"</QuotationMarks>
+      </Quote>
       <FilterMenu
-        onChange={selectedOption}
-        option={option}
-        paintings={paintings}
-      />
-      <FilterBy
         onChange={selectedOption}
         option={option}
         paintings={paintings}
@@ -36,7 +55,6 @@ const Paintings = () => {
         format={format}
         price={price}
       />
-      <Link to="/">Home</Link>
     </div>
   );
 };
