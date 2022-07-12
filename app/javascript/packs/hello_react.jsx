@@ -8,7 +8,7 @@ import Biography from "../src/pages/Biography";
 import Contact from "../src/pages/Contact";
 import styled from "styled-components";
 import Header from "../src/components/Header";
-import HomeTemplate from "../src/components/HomeTemplate"
+import HomeTemplate from "../src/components/HomeTemplate";
 import PagesTemplate from "../src/components/PagesTemplate";
 
 const GlobalStyle = styled.div`
@@ -16,16 +16,13 @@ const GlobalStyle = styled.div`
     font-family: "Roboto Flex", sans serif;
   }
   font-weight: 100;
- margin: 0px;
+  margin: 0px;
 `;
-
-
 
 document.addEventListener("DOMContentLoaded", () => {
   ReactDOM.render(
     <BrowserRouter>
       <GlobalStyle>
-
         <Routes>
           <Route path="" element={<PagesTemplate />}>
             <Route path="biographie" element={<Biography />} />

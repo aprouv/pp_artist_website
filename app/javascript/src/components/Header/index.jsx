@@ -7,14 +7,13 @@ import Pp from "../../assets/images/patricia_prouvost.png";
 const NavContainer = styled.nav`
   display: flex;
   align-items: center;
-  height: 60px;
-  font-size: 12px;
-  height: 92px;
-    box-shadow: 0 4px 6px -6px #222;
-    position: sticky;
-    top: 0;
-    background: white;
-    z-index: 3;
+  font-size: 14px;
+  height: 90px;
+  box-shadow: 0 4px 6px -6px #222;
+  position: sticky;
+  top: 0;
+  background: white;
+  z-index: 3;
 `;
 
 const Logo = styled.img`
@@ -56,14 +55,14 @@ const StaticLinks = styled.div`
   width: 40%;
   display: flex;
   justify-content: flex-end;
-  padding-right: 5px;
+  padding-right: 20px;
 `;
 
 const PaintingsLink = styled.div`
   width: 40%;
   display: flex;
   justify-content: flex-start;
-  padding-left: 5px;
+  padding-left: 20px;
 `;
 
 const Header = () => {

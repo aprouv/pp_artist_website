@@ -17,10 +17,10 @@ const Quote = styled.div`
 `;
 
 const QuotationMarks = styled.span`
-color: ${colors.tertiary};
-font-weight: bold;
-font-size: 30px;
-`
+  color: ${colors.tertiary};
+  font-weight: bold;
+  font-size: 30px;
+`;
 
 const Paintings = () => {
   const [paintings] = useFetch("/api/v1/paintings");
@@ -39,9 +39,11 @@ const Paintings = () => {
   return (
     <div>
       <Quote>
-        <QuotationMarks>"</QuotationMarks> Si la toile émeut, plaît, interroge, dérange, et si de surcroît parfois
-        elle peut véhiculer une idée, témoigner, <br />secouer des idées, alors le
-        peintre peut être satisfait. <QuotationMarks>"</QuotationMarks>
+        <QuotationMarks>"</QuotationMarks> Si la toile émeut, plaît, interroge,
+        dérange, et si de surcroît parfois elle peut véhiculer une idée,
+        témoigner, <br />
+        secouer des idées, alors le peintre peut être satisfait.{" "}
+        <QuotationMarks>"</QuotationMarks>
       </Quote>
       <FilterMenu
         onChange={selectedOption}

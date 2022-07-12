@@ -6,7 +6,7 @@ const HomeTemplate = () => {
     <div>
       <Outlet />
     </div>
-  )
-}
+  );
+};
 
-export default HomeTemplate
+export default HomeTemplate;
