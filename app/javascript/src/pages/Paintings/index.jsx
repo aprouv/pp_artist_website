@@ -25,7 +25,6 @@ const QuotationMarks = styled.span`
 const Paintings = () => {
   const [paintings] = useFetch("/api/v1/paintings");
   const [option, selectOption] = useState("all");
-  // const selectedOption = (e) => selectOption(e.target.value);
   const selectedOption = (value) => {
     const option = value.value;
     selectOption(option);
