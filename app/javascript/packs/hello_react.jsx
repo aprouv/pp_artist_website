@@ -7,7 +7,6 @@ import Painting from "../src/pages/Painting";
 import Biography from "../src/pages/Biography";
 import Contact from "../src/pages/Contact";
 import styled from "styled-components";
-import Header from "../src/components/Header";
 import HomeTemplate from "../src/components/HomeTemplate";
 import PagesTemplate from "../src/components/PagesTemplate";
 
