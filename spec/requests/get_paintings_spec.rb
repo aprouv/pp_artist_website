@@ -2,9 +2,9 @@ require 'rails_helper'
 
 RSpec.describe 'Paintings', type: :request do
   describe 'GET /index' do
-    let(:paintings) { FactoryBot.create_list(:paintings, 10) }
 
     before do
+      FactoryBot.create_list(:painting, 10)
       get '/api/v1/paintings'
     end
 
