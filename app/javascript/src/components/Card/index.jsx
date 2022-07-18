@@ -42,7 +42,11 @@ const Card = ({ name, id }) => {
   const mouseOut = () => setIsHovering(false);
 
   return (
-    <CardsWrapper onMouseOver={mouseOver} onMouseOut={mouseOut}>
+    <CardsWrapper
+      onMouseOver={mouseOver}
+      onMouseOut={mouseOut}
+      data-testid="painting-wrapper"
+    >
       {isHovering ? (
         <div>
           <LinearGradient>
