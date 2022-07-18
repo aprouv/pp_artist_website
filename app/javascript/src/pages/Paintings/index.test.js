@@ -16,7 +16,7 @@ describe("the Paintings page", () => {
         screen.getByText(
           "Si la toile émeut, plaît, interroge, dérange, et si de surcroît parfois elle peut véhiculer une idée, témoigner, secouer des idées, alors le peintre peut être satisfait."
         )
-      ).toBeTruthy();
+      ).toBeInTheDocument();
     });
   });
 
@@ -27,7 +27,7 @@ describe("the Paintings page", () => {
       </MemoryRouter>
     );
     await waitFor(() => {
-      expect(screen.getByText("Tous les tableaux")).toBeTruthy();
+      expect(screen.getByText("Tous les tableaux")).toBeInTheDocument();
     });
   });
 
