@@ -10,8 +10,8 @@ const PaintingWrapper = styled.div`
 `;
 
 const PaintingImage = styled.img`
-  width: 60%;
-  height: 100%;
+  max-width: 60%;
+  max-height: 73vh;
   border: 7px solid darkred;
   padding: 8px;
 `;
@@ -84,9 +84,11 @@ const Painting = () => {
         <PaintingDetails>{element?.year}</PaintingDetails>
         <PaintingDetails>{element?.format} cm</PaintingDetails>
         <PaintingDetails>{element?.price} €</PaintingDetails>
-        <DescriptionButton onClick={onClick}>
-          description <Arrow></Arrow>
-        </DescriptionButton>
+        {element?.description && (
+          <DescriptionButton data-testid="description-button" onClick={onClick}>
+            description <Arrow></Arrow>
+          </DescriptionButton>
+        )}
         {isActive && <DescriptionText>{element?.description}</DescriptionText>}
       </PaintingInfo>
     </PaintingWrapper>
