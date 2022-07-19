@@ -1,8 +1,8 @@
 import React from "react";
 import { MemoryRouter } from "react-router-dom";
 import { waitFor, screen, render } from "@testing-library/react";
-
 import Paintings from "./";
+import server from "../../mocks/server";
 
 describe("the Paintings page", () => {
   it("should display quote", async () => {
@@ -38,7 +38,7 @@ describe("the Paintings page", () => {
       </MemoryRouter>
     );
     await waitFor(() => {
-      const paintings = document.getElementsByClassName("sc-iqcoie hlgDrv");
+      const paintings = document.getElementsByClassName("sc-iBkjds bZGVhU");
       expect(paintings.length).toBe(3);
     });
   });
