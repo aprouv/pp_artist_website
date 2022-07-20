@@ -10,16 +10,17 @@ const PaintingWrapper = styled.div`
 `;
 
 const PaintingImage = styled.img`
-  max-width: 60%;
+  max-width: 90%;
   max-height: 73vh;
-  border: 7px solid darkred;
   padding: 8px;
+  border: 7px solid darkred;
+  margin-left: 3vh;
 `;
 
 const PaintingInfo = styled.div`
-  margin-left: 20px;
   width: 40%;
   text-align: center;
+  margin: auto 0;
 `;
 
 const PaintingName = styled.h1`
@@ -66,6 +67,10 @@ const Arrow = styled.span`
   margin-left: 4px;
 `;
 
+const PaintingImageWrapper = styled.div`
+
+`
+
 const Painting = () => {
   const { id: queryId } = useParams();
   const painting = useFetch(`/api/v1/paintings/${queryId}`);
@@ -75,10 +80,12 @@ const Painting = () => {
 
   return (
     <PaintingWrapper>
+      <PaintingImageWrapper>
       <PaintingImage
         src={require("../../assets/images/" + queryId + ".jpg")}
         alt={element?.name}
       />
+      </PaintingImageWrapper>
       <PaintingInfo>
         <PaintingName>{element?.name}</PaintingName>
         <PaintingDetails>{element?.year}</PaintingDetails>
