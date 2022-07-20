@@ -7,8 +7,8 @@ import Pp from "../../assets/images/patricia_prouvost.png";
 const NavContainer = styled.nav`
   display: flex;
   align-items: center;
-  font-size: 14px;
-  height: 90px;
+  font-size: 22px;
+  height: 110px;
   box-shadow: 0 4px 6px -6px #222;
   position: sticky;
   top: 0;
@@ -47,7 +47,7 @@ const Name = styled.div`
   opacity: 0.7;
   padding-top: 2px;
   letter-spacing: 4.5px;
-  font-size: 10px;
+  font-size: 18px;
   border-top: 1px solid ${colors.tertiary};
 `;
 
@@ -69,8 +69,8 @@ const Header = () => {
   return (
     <NavContainer>
       <StaticLinks>
-        <StyledLink to="/biographie">BIOGRAPHIE</StyledLink>
-        <StyledLink to="/contact">CONTACT</StyledLink>
+        <StyledLink to="/biographie">Biographie</StyledLink>
+        <StyledLink to="/contact">Contact</StyledLink>
       </StaticLinks>
       <HeaderLogo>
         <Link to="/">
@@ -79,7 +79,7 @@ const Header = () => {
         <Name>Patricia Prouvost</Name>
       </HeaderLogo>
       <PaintingsLink>
-        <StyledLink to="/tableaux">TABLEAUX</StyledLink>
+        <StyledLink to="/tableaux">Tableaux</StyledLink>
       </PaintingsLink>
     </NavContainer>
   );
