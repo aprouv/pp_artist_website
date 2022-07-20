@@ -13,7 +13,7 @@ const PaintingImage = styled.img`
   max-width: 90%;
   max-height: 73vh;
   padding: 8px;
-  border: 7px solid darkred;
+  border: thick double black;
   margin-left: 3vh;
 `;
 

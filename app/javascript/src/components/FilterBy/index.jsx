@@ -13,12 +13,12 @@ const OptionButton = styled.div`
   margin: 10px;
   padding: 7px;
   &:hover {
-    background: rgba(107, 17, 22, 0.8);
+    background: rgba(0, 0, 0, 0.8);
   }
 `;
 
 const OptionAll = styled.h2`
-  margin-bottom: 0px;
+  margin-bottom: 10px;
   text-align: center;
   font-weight: lighter;
 `;

@@ -16,7 +16,7 @@ const FilterTitle = styled.div`
 `;
 
 const FilterContainer = styled.div`
-  height: 180px;
+  height: 102px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -29,7 +29,7 @@ const customStyles = {
     minHeight: "30px",
     border: state.isFocused ? "1px solid #ADADAD" : "1px solid #ADADAD",
     // This line disable the blue border
-    boxShadow: state.isFocused ? "1px 1px 1px 1px rgba(107, 17, 22, 0.90)" : 0,
+    boxShadow: state.isFocused ? "1px 1px 1px 1px rgba(0, 0, 0, 0.90)" : 0,
     "&:hover": {
       border: state.isFocused ? "1px solid #ADADAD" : "1px solid #ADADAD",
     },
@@ -40,7 +40,7 @@ const customStyles = {
     fontSize: "13px",
     padding: "2px",
     "&:hover": {
-      background: "rgba(107, 17, 22, 0.90)",
+      background: "rgba(0, 0, 0, 0.90)",
       color: "white",
     },
   }),

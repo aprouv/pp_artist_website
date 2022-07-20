@@ -7,18 +7,20 @@ import styled from "styled-components";
 import colors from "../../utils/style/colors";
 
 const Quote = styled.div`
-  height: 60px;
-  margin-top: 72px;
   font-weight: 100;
   line-height: 39px;
-  font-size: 20px;
+  font-size: 28px;
   margin-bottom: 15px;
   text-align: center;
+  border: thick double black;
+  height: 103px;
+  padding-top: 10Px;
+  margin-top: 43px;
 `;
 
 const QuotationMarks = styled.span`
   color: ${colors.tertiary};
-  font-weight: bold;
+  font-weight: 400;
   font-size: 30px;
 `;
 
