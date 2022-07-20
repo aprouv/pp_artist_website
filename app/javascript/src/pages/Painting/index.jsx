@@ -67,10 +67,6 @@ const Arrow = styled.span`
   margin-left: 4px;
 `;
 
-const PaintingImageWrapper = styled.div`
-
-`
-
 const Painting = () => {
   const { id: queryId } = useParams();
   const painting = useFetch(`/api/v1/paintings/${queryId}`);
@@ -80,12 +76,12 @@ const Painting = () => {
 
   return (
     <PaintingWrapper>
-      <PaintingImageWrapper>
-      <PaintingImage
-        src={require("../../assets/images/" + queryId + ".jpg")}
-        alt={element?.name}
-      />
-      </PaintingImageWrapper>
+      <div>
+        <PaintingImage
+          src={require("../../assets/images/" + queryId + ".jpg")}
+          alt={element?.name}
+        />
+      </div>
       <PaintingInfo>
         <PaintingName>{element?.name}</PaintingName>
         <PaintingDetails>{element?.year}</PaintingDetails>
