@@ -4,19 +4,24 @@ import Select from "react-select";
 import FilterBy from "../FilterBy";
 
 const FilterWrapper = styled.div`
-  width: 15%;
-  opacity: 0.8;
+  max-width: 23%;
+  z-index: 2;
+  @media only screen and (min-width: 1024px) {
+    max-width: 19%;
+  }
+  @media only screen and (min-width: 1200px) {
+    max-width: 15%;
+  }
 `;
 
 const FilterTitle = styled.div`
   font-weight: lighter;
   font-size: 13px;
-  margin-top: 10px;
+  color: black;
   margin-bottom: 5px;
 `;
 
 const FilterContainer = styled.div`
-  height: 102px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -61,6 +66,18 @@ const customStyles = {
     ...provided,
     height: "30px",
   }),
+  placeholder: (provided) => ({
+    ...provided,
+    fontWeight: 300,
+    "@media only screen and (min-width: 768px)": {
+      ...provided["@media only screen and (max-width: 1200px)"],
+      fontSize: "13px",
+    },
+    "@media only screen and (min-width: 1250px)": {
+      ...provided["@media only screen and (max-width: 1200px)"],
+      fontSize: "17px",
+    },
+  }),
 };
 
 const FilterMenu = ({ onChange, option, selectedOption, paintings }) => {
@@ -68,8 +85,9 @@ const FilterMenu = ({ onChange, option, selectedOption, paintings }) => {
     { value: "all", label: "Tous les tableaux" },
     { value: "price", label: "Prix" },
     { value: "format", label: "Format" },
-    { value: "year", label: "Année de création" },
+    { value: "year", label: "Année" },
   ];
+
   return (
     <FilterContainer>
       <FilterWrapper>
@@ -79,6 +97,7 @@ const FilterMenu = ({ onChange, option, selectedOption, paintings }) => {
           options={options}
           onChange={onChange}
           value={option}
+          placeholder={options.map((opt) => opt.value === option && opt.label)}
         />
       </FilterWrapper>
       <FilterBy

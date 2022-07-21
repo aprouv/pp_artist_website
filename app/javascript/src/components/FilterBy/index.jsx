@@ -1,10 +1,12 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
 const OptionsWrapper = styled.div`
   display: flex;
   justify-content: space-evenly;
+  margin-bottom: 11px;
+  margin-top: 9px;
 `;
 
 const OptionButton = styled.div`
@@ -14,13 +16,11 @@ const OptionButton = styled.div`
   padding: 7px;
   &:hover {
     background: rgba(0, 0, 0, 0.8);
-  }
+  };
 `;
 
 const OptionAll = styled.h2`
   margin-bottom: 10px;
-  text-align: center;
-  font-weight: lighter;
 `;
 
 const StyledLink = styled(Link)`
@@ -60,12 +60,12 @@ const FilterBy = ({ option, paintings }) => {
               key={format.toString()}
               format={format}
             >
-              <OptionButton>{format}</OptionButton>
+              <OptionButton >{format}</OptionButton>
             </StyledLink>
           ))}
         </OptionsWrapper>
       ) : option == "all" ? (
-        <OptionAll>Tous les tableaux</OptionAll>
+        <OptionAll></OptionAll>
       ) : (
         <OptionsWrapper>
           {distinctYears.map((year) => (

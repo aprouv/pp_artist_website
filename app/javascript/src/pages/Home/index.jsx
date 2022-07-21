@@ -4,30 +4,30 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import TypewriterEffect from "react-typewriter-effect";
 
-  // background-size: cover;
-  // background-repeat: no-repeat;
-  // background-position: center;
-  // height: 130vh;
-  // position: relative;
+// background-size: cover;
+// background-repeat: no-repeat;
+// background-position: center;
+// height: 130vh;
+// position: relative;
 
 const Container = styled.div`
-display: flex;
-min-height: 100vh;
-flex-wrap: wrap;
+  display: flex;
+  min-height: 100vh;
+  flex-wrap: wrap;
 `;
 
-const ImageContainer= styled.div`
-background-image: url(${HomePainting});
-    background-size: cover;
-    height: 100vh;
-    flex: 75%;
-`
+const ImageContainer = styled.div`
+  background-image: url(${HomePainting});
+  background-size: cover;
+  height: 100vh;
+  flex: 75%;
+`;
 
 const NavlistWrapper = styled.div`
-display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    margin: 109px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 109px 30px;
 `;
 
 const HomeLink = styled(Link)`
@@ -48,9 +48,9 @@ const HomeLink = styled(Link)`
 `;
 
 const HomeName = styled.h2`
-text-align: right;
-    color: white;
-    text-shadow: 3px 3px 13px black;
+  text-align: right;
+  color: white;
+  text-shadow: 3px 3px 13px black;
   font-weight: 400;
   font-size: 68px;
   letter-spacing: 11px;
@@ -87,12 +87,16 @@ const Home = () => {
         />
       </HomeQuoteWrapper>
       <ImageContainer>
-      <HomeName>Patricia<br/>Prouvost</HomeName>
-      <NavlistWrapper>
-        <HomeLink to="biographie">Biographie</HomeLink>
-        <HomeLink to="tableaux">Tableaux</HomeLink>
-        <HomeLink to="contact">Contact</HomeLink>
-      </NavlistWrapper>
+        <HomeName>
+          Patricia
+          <br />
+          Prouvost
+        </HomeName>
+        <NavlistWrapper>
+          <HomeLink to="biographie">Biographie</HomeLink>
+          <HomeLink to="tableaux">Tableaux</HomeLink>
+          <HomeLink to="contact">Contact</HomeLink>
+        </NavlistWrapper>
       </ImageContainer>
     </Container>
   );

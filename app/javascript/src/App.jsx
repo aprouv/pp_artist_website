@@ -7,7 +7,7 @@ import Biography from "../src/pages/Biography";
 import Contact from "../src/pages/Contact";
 import styled from "styled-components";
 import HomeTemplate from "../src/components/HomeTemplate";
-import PagesTemplate from "../src/components/PagesTemplate";
+import PagesTemplateWhite from "./components/PagesTemplateWhite";
 
 const GlobalStyle = styled.div`
   * {
@@ -22,10 +22,10 @@ const App = () => {
     <BrowserRouter>
       <GlobalStyle>
         <Routes>
-          <Route path="" element={<PagesTemplate />}>
+          <Route path="" element={<PagesTemplateWhite />}>
+            <Route path="tableaux" element={<Paintings />} />
             <Route path="biographie" element={<Biography />} />
             <Route path="contact" element={<Contact />} />
-            <Route path="tableaux" element={<Paintings />} />
             <Route path="tableaux/:id" element={<Painting />} />
           </Route>
           <Route exact path="/" element={<HomeTemplate />}>

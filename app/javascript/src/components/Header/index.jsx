@@ -7,13 +7,21 @@ import Pp from "../../assets/images/patricia_prouvost.png";
 const NavContainer = styled.nav`
   display: flex;
   align-items: center;
-  font-size: 22px;
   height: 110px;
   box-shadow: 0 4px 6px -6px #222;
   position: sticky;
   top: 0;
   background: white;
   z-index: 3;
+  @media only screen and (min-width: 768px) {
+    font-size: 16px;
+  }
+  @media only screen and (min-width: 1024px) {
+    font-size: 19px;
+  }
+  @media only screen and (min-width: 1200px) {
+    font-size: 22px;
+  }
 `;
 
 const Logo = styled.img`
@@ -47,8 +55,16 @@ const Name = styled.div`
   opacity: 0.7;
   padding-top: 2px;
   letter-spacing: 4.5px;
-  font-size: 18px;
   border-top: 1px solid ${colors.tertiary};
+  @media only screen and (min-width: 768px) {
+    font-size: 9px;
+  }
+  @media only screen and (min-width: 1024px) {
+    font-size: 15px;
+  }
+  @media only screen and (min-width: 1200px) {
+    font-size: 18px;
+  }
 `;
 
 const StaticLinks = styled.div`
