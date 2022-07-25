@@ -16,7 +16,7 @@ const OptionButton = styled.div`
   padding: 7px;
   &:hover {
     background: rgba(0, 0, 0, 0.8);
-  };
+  }
 `;
 
 const OptionAll = styled.h2`
@@ -60,7 +60,7 @@ const FilterBy = ({ option, paintings }) => {
               key={format.toString()}
               format={format}
             >
-              <OptionButton >{format}</OptionButton>
+              <OptionButton>{format}</OptionButton>
             </StyledLink>
           ))}
         </OptionsWrapper>
