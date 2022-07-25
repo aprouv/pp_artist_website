@@ -1,10 +1,10 @@
 import React from "react";
+import Form from "../../components/Form";
 
 const Contact = () => {
   return (
     <div>
-      <p>Contact : </p>
-      <p>patricia.prouvost@outlook.fr</p>
+      <Form />
     </div>
   );
 };
