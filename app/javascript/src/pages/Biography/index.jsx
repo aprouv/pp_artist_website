@@ -33,19 +33,21 @@ const Biography = () => {
     <div>
       <BioWrapper>
         <BioText>
-          <p style={{marginTop: 0}}>
-            Après 44 ans passés à Reims, je suis, depuis quelques
-            années, installée en bord de mer. Je profite des lumières et ciels
+          <p style={{ marginTop: 0 }}>
+            Après 44 ans passés à Reims, je suis, depuis quelques années,
+            installée en bord de mer. Je profite des lumières et ciels
             changeants de la Côte d’Albâtre pour nourrir mon inspiration déjà
             bien habitée par un imaginaire foisonnant et un regard acéré sur le
-            monde. Totalement autodidacte, je peins vraiment par plaisir au gré de mes envies.
-            Initialement portée sur l’écriture, et notamment la poésie, j'ai finalement opté pour cette autre façon, plus directe et
+            monde. Totalement autodidacte, je peins vraiment par plaisir au gré
+            de mes envies. Initialement portée sur l’écriture, et notamment la
+            poésie, j'ai finalement opté pour cette autre façon, plus directe et
             synthétique, plus “sensorielle” peut-être, d’exprimer mes idées et
             émotions avec des couleurs.
           </p>
 
           <BioQuote>
-            “Une journée sans peindre est une journée de perdue. Mais ce qui compense, c’est que l’on peint aussi dans sa tête” !{" "}
+            “Une journée sans peindre est une journée de perdue. Mais ce qui
+            compense, c’est que l’on peint aussi dans sa tête” !{" "}
           </BioQuote>
 
           <p>
@@ -68,11 +70,10 @@ const Biography = () => {
             Des questions métaphysiques évoquées, soulevées, posées et déposées
             sur la toile sous formes diverses et parfois de symboles...avec
             toutes sortes d’outils sous la main, et pas seulement pinceaux et
-            couteaux.
-            Au-delà du simple plaisir de créer, d’appréhender toujours et
-            encore, sans relâche, jour après jour, un mode d’expression infini,
-            il y a bien sûr, vous l’aurez compris, beaucoup de passion, d’esprit
-            d’aventure et de vrai bonheur !
+            couteaux. Au-delà du simple plaisir de créer, d’appréhender toujours
+            et encore, sans relâche, jour après jour, un mode d’expression
+            infini, il y a bien sûr, vous l’aurez compris, beaucoup de passion,
+            d’esprit d’aventure et de vrai bonheur !
           </p>
         </BioText>
         <BioImage src={BioPhoto} alt={name} />
