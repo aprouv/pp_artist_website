@@ -14,7 +14,7 @@ const Quote = styled.div`
   margin: 0 20px 20px 20px;
   @media only screen and (min-width: 768px) {
     padding: 10px 17px;
-    font-size: 20px;
+    font-size: 19px;
   }
   @media only screen and (min-width: 1024px) {
     font-size: 24px;
@@ -27,7 +27,7 @@ const Quote = styled.div`
 `;
 
 const QuotationMarks = styled.span`
-  color: white;
+  color: black;
   font-weight: 400;
   font-size: 30px;
 `;

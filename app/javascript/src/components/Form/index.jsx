@@ -13,17 +13,29 @@ const FormContainer = styled.div`
 const Textarea = styled.textarea`
   height: 30vh;
   width: 79vh;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  cursor: text !important;
 `;
 
-const InputFields = styled.div`
-  margin: 10px;
+const InputFields = styled.input`
+  margin: 10px auto;
+  display: block;
+  border: 1px solid lightgrey;
+  border-radius: 5px;
+  cursor: text;
 `;
 
 const SubmitButton = styled.button`
   padding: 2px 10px;
   color: white;
+  margin-top: 3px;
   background: black;
   border-radius: 5px;
+  cursor: pointer !important;
+  &:hover {
+    opacity: 0.7;
+  }
 `;
 
 const Form = () => {
@@ -53,32 +65,32 @@ const Form = () => {
     <FormContainer>
       <h3 style={{ marginTop: 0 }}>Contactez Patricia Prouvost</h3>
       <form onSubmit={onSubmit}>
-        <InputFields>
-          <input
+        <div>
+          <InputFields
             type="text"
             name="from_name"
             placeholder="Nom"
             value={toSend.from_name}
             onChange={handleChange}
           />
-        </InputFields>
-        <InputFields>
-          <input
+        </div>
+        <div>
+          <InputFields
             type="email"
             name="reply_to"
             placeholder="Adresse email"
             value={toSend.reply_to}
             onChange={handleChange}
           />
-        </InputFields>
-        <InputFields>
+        </div>
+        <div>
           <Textarea
             name="message"
             placeholder="Votre message"
             value={toSend.message}
             onChange={handleChange}
           />
-        </InputFields>
+        </div>
         <SubmitButton type="submit">Envoyer</SubmitButton>
       </form>
     </FormContainer>
