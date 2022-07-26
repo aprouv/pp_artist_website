@@ -1,24 +1,21 @@
-# README
+**Install**
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+```sh
+bundle install
+yarn install
+```
 
-Things you may want to cover:
+Then:
 
-- Ruby version
+```sh
+rails db:create
+rails db:migrate
+```
 
-- System dependencies
+**Seed the database**
 
-- Configuration
+Run:
 
-- Database creation
-
-- Database initialization
-
-- How to run the test suite
-
-- Services (job queues, cache servers, search engines, etc.)
-
-- Deployment instructions
-
-- ...
+```sh
+rails db:seed
+```
