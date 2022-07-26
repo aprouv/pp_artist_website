@@ -8,14 +8,19 @@ import Contact from "../src/pages/Contact";
 import styled from "styled-components";
 import HomeTemplate from "../src/components/HomeTemplate";
 import PagesTemplateWhite from "./components/PagesTemplateWhite";
+import Cursor from "../src/assets/images/cursor.png";
 
 const GlobalStyle = styled.div`
   * {
     font-family: "Roboto Flex", sans serif;
   }
   font-weight: 100;
+  cursor: url(${Cursor}), auto;
+  height: 100vh;
   margin: 0px;
 `;
+
+// Painting Brush by fauzan akbar from NounProject.com
 
 const App = () => {
   return (
