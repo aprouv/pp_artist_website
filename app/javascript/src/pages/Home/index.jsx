@@ -4,12 +4,6 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 import TypewriterEffect from "react-typewriter-effect";
 
-// background-size: cover;
-// background-repeat: no-repeat;
-// background-position: center;
-// height: 130vh;
-// position: relative;
-
 const Container = styled.div`
   display: flex;
   min-height: 100vh;
@@ -103,52 +97,3 @@ const Home = () => {
 };
 
 export default Home;
-
-{
-  /* <TypeWriterEffect
-        textStyle={{
-          fontFamily: 'Red Hat Display',
-          color: '#3F3D56',
-          fontWeight: 500,
-          fontSize: '1.5em',
-        }}
-        startDelay={2000}
-        cursorColor="#3F3D56"
-        multiText={[
-          'Hey there, This is a type writer animation package',
-          'it consist of two types...',
-          'Single text display and multi text display',
-          'Fonts can be customized.',
-          'The type speed can be customized as well',
-        ]}
-        multiTextDelay={1000}
-        typeSpeed={30}
-      /> */
-}
-
-// textStyle={{ fontFamily: 'Red Hat Display' }}
-//             startDelay={100}
-//             cursorColor="black"
-//             text="This is a single text"
-//             typeSpeed={100}
-//             scrollArea={myAppRef}
-
-// return (
-//     <div className="App">
-//       <Typewriter
-
-//        onInit={(typewriter)=> {
-
-//        typewriter
-
-//        .typeString("GeeksForGeeks")
-
-//        .pauseFor(1000)
-//        .deleteAll()
-//        .typeString("Welcomes You")
-//        .start();
-//        }}
-//        />
-//     </div>
-//   );
-// }
