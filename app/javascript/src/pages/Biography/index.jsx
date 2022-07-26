@@ -55,7 +55,7 @@ const Biography = () => {
             que sont les toiles, c’est le partage d’un élan, d’une idée aboutie,
             d’une observation retransmise qui me motivent. Emouvoir, toucher la
             corde sensible de personnes qui, quelque part, par leurs goûts, par
-            leur vie, leur parcours, peuvent, à un moment donné rejoindre son
+            leur vie, leur parcours, peuvent, à un moment donné rejoindre mon
             univers est pour moi une façon bien agréable et gratifiante de
             communiquer sans les mots, dans un langage universel.
           </p>
