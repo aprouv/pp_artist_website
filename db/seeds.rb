@@ -20,3 +20,6 @@ CSV.foreach(Rails.root.join('lib/seeds/paintings.csv'), headers: true, col_sep: 
 end
 
 puts "All paintings saved"
+
+Review.create(name: 'Andréa', content: 'Très belles toiles')
+Review.create(name: 'Jean-Paul', content: "j'adore votre travail, continuez ainsi")
