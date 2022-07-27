@@ -1,4 +1,8 @@
 FactoryBot.define do
+  factory :review do
+    
+  end
+
 
   factory :painting do
     name { Faker::Lorem.sentence }
