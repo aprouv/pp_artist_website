@@ -2,6 +2,24 @@ import React, { useState } from "react";
 import useFetch from "../../utils/hooks";
 import ReviewsList from "../../components/ReviewsList";
 import ReviewForm from "../../components/ReviewForm";
+import styled from "styled-components";
+import ReviewPainting from "../../assets/images/review_painting.jpg";
+
+const ReviewContainer = styled.div`
+  background-image: url(${ReviewPainting});
+  background-size: cover;
+`;
+
+const ReviewTitle = styled.h1`
+  margin-top: 0;
+  padding-top: 3vh;
+  color: white;
+`;
+
+const ReviewSubtitle = styled.h4`
+  font-weight: 200;
+  color: white;
+`;
 
 const Reviews = () => {
   const [toggle, setToggle] = useState(false);
@@ -10,7 +28,8 @@ const Reviews = () => {
     name: "",
     content: "",
   });
-  const setToggleBoolean = () => (toggle == false ? setToggle(true) : setToggle(false));
+  const setToggleBoolean = () =>
+    toggle == false ? setToggle(true) : setToggle(false);
 
   const handleChange = (e) => {
     setReviewData({ ...reviewData, [e.target.name]: e.target.value });
@@ -38,14 +57,20 @@ const Reviews = () => {
     e.preventDefault();
     fetchData();
     setToggleBoolean();
-    e.target.value = "";
+    setReviewData({
+      name: "",
+      content: "",
+    });
   };
 
   return (
-    <div style={{ margin: "0px" }}>
-      <div>
-        <h1>Livre d'or</h1>
-        <h4>Partagez ici vos impressions</h4>
+    <ReviewContainer style={{ margin: "0px" }}>
+      <div style={{ margin: "0 3vw" }}>
+        <ReviewTitle>Livre d'or</ReviewTitle>
+        <ReviewSubtitle>
+          Partagez ici publiquement vos avis, vos impressions, vos
+          suggestions...
+        </ReviewSubtitle>
       </div>
       <div>
         <ReviewForm
@@ -58,7 +83,7 @@ const Reviews = () => {
       <div>
         <ReviewsList reviews={reviews} />
       </div>
-    </div>
+    </ReviewContainer>
   );
 };
 
