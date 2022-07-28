@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import HomePainting from "../../assets/images/home_painting.jpg";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
@@ -90,6 +90,7 @@ const Home = () => {
           <HomeLink to="biographie">Biographie</HomeLink>
           <HomeLink to="tableaux">Tableaux</HomeLink>
           <HomeLink to="contact">Contact</HomeLink>
+          <HomeLink to="livredor">Livre d'or</HomeLink>
         </NavlistWrapper>
       </ImageContainer>
     </Container>
