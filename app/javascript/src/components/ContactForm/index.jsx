@@ -38,7 +38,7 @@ const SubmitButton = styled.button`
   }
 `;
 
-const Form = () => {
+const ContactForm = () => {
   const [toSend, setToSend] = useState({
     from_name: "",
     message: "",
@@ -97,4 +97,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default ContactForm;

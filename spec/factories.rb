@@ -1,5 +1,11 @@
 FactoryBot.define do
 
+  factory :review do
+    name { Faker::Lorem.sentence }
+    content { Faker::Lorem.paragraph }
+  end
+
+
   factory :painting do
     name { Faker::Lorem.sentence }
     description { Faker::Lorem.paragraph }

@@ -86,7 +86,7 @@ const Header = () => {
     <NavContainer>
       <StaticLinks>
         <StyledLink to="/biographie">Biographie</StyledLink>
-        <StyledLink to="/contact">Contact</StyledLink>
+        <StyledLink to="/tableaux">Tableaux</StyledLink>
       </StaticLinks>
       <HeaderLogo>
         <Link to="/">
@@ -95,7 +95,8 @@ const Header = () => {
         <Name>Patricia Prouvost</Name>
       </HeaderLogo>
       <PaintingsLink>
-        <StyledLink to="/tableaux">Tableaux</StyledLink>
+        <StyledLink to="/contact">Contact</StyledLink>
+        <StyledLink to="/livredor">Livre d'or</StyledLink>
       </PaintingsLink>
     </NavContainer>
   );

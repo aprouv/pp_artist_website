@@ -9,6 +9,7 @@ import styled from "styled-components";
 import HomeTemplate from "../src/components/HomeTemplate";
 import PagesTemplateWhite from "./components/PagesTemplateWhite";
 import Cursor from "../src/assets/images/cursor.png";
+import Reviews from "./pages/Reviews";
 
 const GlobalStyle = styled.div`
   * {
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="biographie" element={<Biography />} />
             <Route path="contact" element={<Contact />} />
             <Route path="tableaux/:id" element={<Painting />} />
+            <Route path="livredor" element={<Reviews />} />
           </Route>
           <Route exact path="/" element={<HomeTemplate />}>
             <Route index element={<Home />} />
