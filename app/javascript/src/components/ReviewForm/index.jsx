@@ -2,19 +2,22 @@ import React from "react";
 import styled from "styled-components";
 
 const Textarea = styled.textarea`
-  height: 30vh;
-  width: 79vh;
+  height: 20vh;
+  min-width: 60vw;
+  max-width: 100vw;
   border: 1px solid lightgrey;
   border-radius: 5px;
   cursor: text !important;
+  opacity: 0.9;
 `;
 
 const InputFields = styled.input`
-  margin: 10px auto;
+  margin: 10px 0;
   display: block;
   border: 1px solid lightgrey;
   border-radius: 5px;
   cursor: text;
+  opacity: 0.9;
 `;
 
 const SubmitButton = styled.button`
@@ -24,6 +27,7 @@ const SubmitButton = styled.button`
   background: black;
   border-radius: 5px;
   cursor: pointer !important;
+  box-shadow: 1px 1px 2px 1px #888884;
   &:hover {
     opacity: 0.7;
   }
@@ -31,15 +35,17 @@ const SubmitButton = styled.button`
 
 const ReviewForm = ({ onSubmit, onClick, reviewData, onChange }) => {
   return (
-    <div>
+    <div style={{ marginLeft: "3vw" }}>
       <form onSubmit={onSubmit}>
         <div>
           <InputFields
             type="text"
             value={reviewData.name}
             name="name"
-            placeholder="Nom"
+            placeholder="Votre nom"
             onChange={onChange}
+            aria-label="name"
+            required
           />
         </div>
         <div>
@@ -48,6 +54,8 @@ const ReviewForm = ({ onSubmit, onClick, reviewData, onChange }) => {
             name="content"
             value={reviewData.content}
             onChange={onChange}
+            aria-label="content"
+            required
           />
         </div>
         <SubmitButton type="submit" onClick={onClick}>
