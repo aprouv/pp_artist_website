@@ -55,6 +55,11 @@ const ContactForm = () => {
       .catch((err) => {
         console.log("FAILED...", err);
       });
+    setToSend({
+      from_name: "",
+      message: "",
+      reply_to: "",
+    })
   };
 
   const handleChange = (e) => {

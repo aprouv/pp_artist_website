@@ -24,3 +24,23 @@ export const paintingsMockedData = [
     year: 2019,
   },
 ];
+
+export const reviewMockedData = [
+  {
+    name: "new name",
+    content: "new content",
+  },
+];
+
+export const reviewsMockedData = [
+  {
+    id: 1,
+    name: "name1",
+    content: "content1",
+  },
+  {
+    id: 2,
+    name: "name2",
+    content: "content2",
+  },
+];
