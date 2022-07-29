@@ -21,15 +21,27 @@ const ReviewSubtitle = styled.h4`
   color: white;
 `;
 
+const AlertReviewAdded = styled.div`
+  padding: 10px 0;
+  background: white;
+  opacity: 0.8;
+  text-align: center;
+  font-weight: 600;
+`;
+
 const Reviews = () => {
   const [toggle, setToggle] = useState(false);
+  const setToggleBoolean = () =>
+    toggle == false ? setToggle(true) : setToggle(false);
+
   let [reviews] = useFetch("/api/v1/reviews", toggle);
   const [reviewData, setReviewData] = useState({
     name: "",
     content: "",
   });
-  const setToggleBoolean = () =>
-    toggle == false ? setToggle(true) : setToggle(false);
+
+  const [reviewAdded, setReviewAdded] = useState(false);
+  const handleReviewAdded = () => setReviewAdded(true);
 
   const handleChange = (e) => {
     setReviewData({ ...reviewData, [e.target.name]: e.target.value });
@@ -61,6 +73,10 @@ const Reviews = () => {
       name: "",
       content: "",
     });
+    handleReviewAdded();
+    setTimeout(() => {
+      setReviewAdded(false);
+    }, 4000);
   };
 
   return (
@@ -72,6 +88,11 @@ const Reviews = () => {
           suggestions...
         </ReviewSubtitle>
       </div>
+      {reviewAdded && (
+        <AlertReviewAdded role="alert">
+          Votre commentaire a bien été posté
+        </AlertReviewAdded>
+      )}
       <div>
         <ReviewForm
           onChange={handleChange}
