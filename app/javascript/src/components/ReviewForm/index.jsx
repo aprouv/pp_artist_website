@@ -50,6 +50,7 @@ const ReviewForm = ({ onSubmit, onClick, reviewData, onChange }) => {
         </div>
         <div>
           <Textarea
+            role="textarea"
             placeholder="Votre message"
             name="content"
             value={reviewData.content}
@@ -58,7 +59,7 @@ const ReviewForm = ({ onSubmit, onClick, reviewData, onChange }) => {
             required
           />
         </div>
-        <SubmitButton type="submit" onClick={onClick}>
+        <SubmitButton type="submit" onClick={onClick} aria-label="Click me">
           Envoyer
         </SubmitButton>
       </form>
