@@ -48,7 +48,7 @@ const Reviews = () => {
   };
 
   const fetchData = () => {
-    fetch("http://localhost:3000/api/v1/reviews", {
+    fetch("api/v1/reviews", {
       method: "POST",
       headers: {
         accept: "application/json",
