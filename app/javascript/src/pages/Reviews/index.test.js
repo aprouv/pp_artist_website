@@ -6,7 +6,6 @@ import userEvent from "@testing-library/user-event";
 import server from "../../mocks/server";
 
 describe("The reviews page", () => {
-
   it("should display all reviews", async () => {
     render(
       <MemoryRouter>
@@ -49,8 +48,8 @@ describe("The reviews page", () => {
 
     await waitFor(() => {
       // expect(alertMock).toHaveBeenCalledTimes(1);
-      const alert = screen.getByRole('alert');
-      expect(alert).toHaveTextContent('Votre commentaire a bien été posté');
+      const alert = screen.getByRole("alert");
+      expect(alert).toHaveTextContent("Votre commentaire a bien été posté");
     });
   });
 });
