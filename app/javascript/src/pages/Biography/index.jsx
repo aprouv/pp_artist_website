@@ -7,17 +7,31 @@ const BioWrapper = styled.div`
   display: flex;
   text-align: justify;
   justify-content: space-evenly;
+  @media only screen and (max-width: 768px) {
+    flex-wrap: wrap;
+    flex: 1 1 100vw;
+  }
+  @media only screen and (min-width: 1024px) {
+    align-items: center;
+  }
 `;
 
 const BioImage = styled.img`
-  height: 73vh;
   object-fit: contain;
   border: double thick;
   padding: 7px;
+  max-height: 70vh;
+  @media only screen and (max-width: 768px) {
+    max-height: 60vh;
+  }
 `;
 
 const BioText = styled.div`
   margin-right: 20px;
+  max-width: 127vh;
+  @media only screen and (max-width: 768px) {
+    margin-right: 0;
+  }
 `;
 
 const BioQuote = styled.p`
@@ -46,8 +60,8 @@ const Biography = () => {
           </p>
 
           <BioQuote>
-            “Une journée sans peindre est une journée de perdue. Mais ce qui
-            compense, c’est que l’on peint aussi dans sa tête” !{" "}
+            "Une journée sans peindre est une journée de perdue. Mais ce qui
+            compense, c’est que l’on peint aussi dans sa tête!"{" "}
           </BioQuote>
 
           <p>

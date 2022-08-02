@@ -12,10 +12,10 @@ const FormContainer = styled.div`
 
 const Textarea = styled.textarea`
   height: 30vh;
-  width: 79vh;
   border: 1px solid lightgrey;
   border-radius: 5px;
   cursor: text !important;
+  width: 49vw;
 `;
 
 const InputFields = styled.input`
@@ -59,7 +59,7 @@ const ContactForm = () => {
       from_name: "",
       message: "",
       reply_to: "",
-    })
+    });
   };
 
   const handleChange = (e) => {

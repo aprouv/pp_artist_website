@@ -15,13 +15,26 @@ const ImageContainer = styled.div`
   background-size: cover;
   height: 100vh;
   flex: 75%;
+  display: flex;
+  flex-direction: column;
+  align-content: flex-end;
+  justify-content: space-between;
+  align-items: flex-end;
+  @media only screen and (max-width: 600px) {
+    align-items: center;
+  }
 `;
 
 const NavlistWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  margin: 109px 30px;
+  margin: 10px 30px;
+  @media only screen and (max-width: 600px) {
+    align-items: center;
+    height: 60vh;
+    justify-content: space-evenly;
+  }
 `;
 
 const HomeLink = styled(Link)`
@@ -38,6 +51,11 @@ const HomeLink = styled(Link)`
   &:hover {
     transform: scale(1.1);
     transition: 0.5s ease;
+  }
+  @media only screen and (max-width: 600px) {
+    width: 17vh;
+    padding: 15px 15px;
+    font-size: 27px;
   }
 `;
 
@@ -57,6 +75,9 @@ const HomeQuoteWrapper = styled.div`
   max-height: 100vh;
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Home = () => {
@@ -76,7 +97,7 @@ const Home = () => {
           }}
           startDelay={100}
           cursorColor="white"
-          text="Quand l'art reste libre et garde une certaine spontanéité d'expression, au-delà du travail et de l'expérience acquise, se moquant des modes, du marché et ses spéculations, alors il est authentique !"
+          text="Quand l'art reste libre et garde une certaine spontanéité d'expression, au-delà du travail et de l'expérience acquise, se moquant des modes, du marché et ses spéculations, alors il est authentique!"
           typeSpeed={50}
         />
       </HomeQuoteWrapper>
