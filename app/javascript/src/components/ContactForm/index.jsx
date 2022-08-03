@@ -8,6 +8,10 @@ const FormContainer = styled.div`
   text-align: center;
   padding: 10px;
   border: double thick;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  height: 70vh;
 `;
 
 const Textarea = styled.textarea`
@@ -16,10 +20,11 @@ const Textarea = styled.textarea`
   border-radius: 5px;
   cursor: text !important;
   width: 49vw;
+  margin: 15px auto;
 `;
 
 const InputFields = styled.input`
-  margin: 10px auto;
+  margin: 15px auto;
   display: block;
   border: 1px solid lightgrey;
   border-radius: 5px;

@@ -53,7 +53,7 @@ const HomeLink = styled(Link)`
     transition: 0.5s ease;
   }
   @media only screen and (max-width: 600px) {
-    width: 17vh;
+    width: 19vh;
     padding: 15px 15px;
     font-size: 27px;
   }

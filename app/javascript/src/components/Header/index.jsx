@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 import colors from "../../utils/style/colors.js";
 import Pp from "../../assets/images/patricia_prouvost.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
+import MenuList from "../MenuList/index.jsx";
+
+const element = <FontAwesomeIcon icon={faBars} size="2x" />;
 
 const NavContainer = styled.nav`
   display: flex;
@@ -13,6 +18,10 @@ const NavContainer = styled.nav`
   top: 0;
   background: white;
   z-index: 3;
+  @media only screen and (max-width: 768px) {
+    height: 14vh;
+    justify-content: space-between;
+  }
   @media only screen and (min-width: 768px) {
     font-size: 16px;
   }
@@ -48,6 +57,9 @@ const StyledLink = styled(Link)`
 
 const HeaderLogo = styled.div`
   width: 20%;
+  @media only screen and (max-width: 768px) {
+    width: 25vh;
+  }
 `;
 
 const Name = styled.div`
@@ -56,6 +68,9 @@ const Name = styled.div`
   padding-top: 2px;
   letter-spacing: 4.5px;
   border-top: 1px solid ${colors.tertiary};
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
   @media only screen and (min-width: 768px) {
     font-size: 9px;
   }
@@ -72,6 +87,9 @@ const StaticLinks = styled.div`
   display: flex;
   justify-content: flex-end;
   padding-right: 20px;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const PaintingsLink = styled.div`
@@ -79,26 +97,40 @@ const PaintingsLink = styled.div`
   display: flex;
   justify-content: flex-start;
   padding-left: 20px;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Header = () => {
+  const [isBurgerButtonClicked, setIsBurgerButtonClicked] = useState(false);
+  const handleButtonClick = () => {
+    isBurgerButtonClicked
+      ? setIsBurgerButtonClicked(false)
+      : setIsBurgerButtonClicked(true);
+  };
+
   return (
-    <NavContainer>
-      <StaticLinks>
-        <StyledLink to="/biographie">Biographie</StyledLink>
-        <StyledLink to="/tableaux">Tableaux</StyledLink>
-      </StaticLinks>
-      <HeaderLogo>
-        <Link to="/">
-          <Logo src={Pp} />
-        </Link>
-        <Name>Patricia Prouvost</Name>
-      </HeaderLogo>
-      <PaintingsLink>
-        <StyledLink to="/contact">Contact</StyledLink>
-        <StyledLink to="/livredor">Livre d'or</StyledLink>
-      </PaintingsLink>
-    </NavContainer>
+    <div>
+      <NavContainer>
+        <StaticLinks>
+          <StyledLink to="/biographie">Biographie</StyledLink>
+          <StyledLink to="/tableaux">Tableaux</StyledLink>
+        </StaticLinks>
+        <HeaderLogo>
+          <Link to="/">
+            <Logo src={Pp} />
+          </Link>
+          <Name>Patricia Prouvost</Name>
+        </HeaderLogo>
+        <span onClick={handleButtonClick}>{element}</span>
+        <PaintingsLink>
+          <StyledLink to="/contact">Contact</StyledLink>
+          <StyledLink to="/livredor">Livre d'or</StyledLink>
+        </PaintingsLink>
+      </NavContainer>
+      {isBurgerButtonClicked && <MenuList onClick={handleButtonClick} />}
+    </div>
   );
 };
 
