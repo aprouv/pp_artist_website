@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
@@ -7,6 +7,7 @@ const OptionsWrapper = styled.div`
   justify-content: space-evenly;
   margin-bottom: 11px;
   margin-top: 9px;
+  flex-wrap: wrap;
 `;
 
 const OptionButton = styled.div`
@@ -14,6 +15,11 @@ const OptionButton = styled.div`
   border-radius: 11px;
   margin: 10px;
   padding: 7px;
+  @media only screen and (max-width: 600px) {
+    margin: 6px;
+  font-size: 11px;
+    text-align: center;
+  }
   &:hover {
     background: rgba(0, 0, 0, 0.8);
   }
@@ -33,8 +39,13 @@ const StyledLink = styled(Link)`
 `;
 
 const FilterBy = ({ option, paintings }) => {
-  const distinctFormats = [...new Set(paintings?.map((x) => x.format))];
+  const noSortedFormats = [...new Set(paintings?.map((x) => x.format))];
   const distinctYears = [...new Set(paintings?.map((x) => x.year))].sort();
+  const distinctFormats = noSortedFormats.sort(function (a, b) {
+    let firstFormat = parseInt(a.substring(0, 3)),
+        secondFormat = parseInt(b.substring(0, 3));
+    return firstFormat == secondFormat ? 0 : firstFormat > secondFormat ? 1 : -1;
+  });
 
   return (
     <div>
