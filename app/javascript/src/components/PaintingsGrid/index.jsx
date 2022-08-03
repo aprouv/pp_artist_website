@@ -52,7 +52,7 @@ const PaintingsGrid = ({ paintings, year, option, format, price }) => {
     <CardsContainer>
       <ColumnsContainer>
         {filterPaintings
-          ?.slice(0, filterPaintingsColumns)
+          ?.slice(0, filterPaintingsColumns + 2)
           .map((painting, index) => (
             <Link key={index} to={`/tableaux/${painting.id}`}>
               <Card name={painting.name} id={painting.id} />
@@ -61,7 +61,7 @@ const PaintingsGrid = ({ paintings, year, option, format, price }) => {
       </ColumnsContainer>
       <ColumnsContainer>
         {filterPaintings
-          ?.slice(filterPaintingsColumns, filterPaintingsColumns * 2)
+          ?.slice(filterPaintingsColumns + 2, (filterPaintingsColumns * 2) + 2)
           .map((painting, index) => (
             <Link key={index} to={`/tableaux/${painting.id}`}>
               <Card name={painting.name} id={painting.id} />
@@ -70,7 +70,7 @@ const PaintingsGrid = ({ paintings, year, option, format, price }) => {
       </ColumnsContainer>
       <ColumnsContainer>
         {filterPaintings
-          ?.slice(filterPaintingsColumns * 2, filterPaintings.length)
+          ?.slice((filterPaintingsColumns * 2) + 2, filterPaintings.length)
           .map((painting, index) => (
             <Link key={index} to={`/tableaux/${painting.id}`}>
               <Card name={painting.name} id={painting.id} />
