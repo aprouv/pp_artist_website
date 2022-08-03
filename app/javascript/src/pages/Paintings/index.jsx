@@ -12,6 +12,13 @@ const Quote = styled.div`
   border: thick double black;
   height: 103px;
   margin: 0 20px 20px 20px;
+  @media only screen and (max-width: 600px) {
+    display: none;
+  }
+  @media only screen and (min-width: 600px) {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
   @media only screen and (min-width: 768px) {
     padding: 10px 17px;
     font-size: 19px;
@@ -29,7 +36,6 @@ const Quote = styled.div`
 const QuotationMarks = styled.span`
   color: black;
   font-weight: 400;
-  font-size: 30px;
 `;
 
 const QuoteWrapper = styled.div`
@@ -57,10 +63,10 @@ const Paintings = () => {
     <div style={{ margin: "0px" }}>
       <QuoteWrapper>
         <Quote>
-          <QuotationMarks>"</QuotationMarks> Si la toile émeut, plaît,
-          interroge, dérange, et si de surcroît parfois elle peut véhiculer une
-          idée, témoigner, secouer des idées, alors le peintre peut être
-          satisfait. <QuotationMarks>"</QuotationMarks>
+          <QuotationMarks>"</QuotationMarks>Si la toile émeut, plaît, interroge,
+          dérange, et si de surcroît parfois elle peut véhiculer une idée,
+          témoigner, secouer des idées, alors le peintre peut être satisfait.
+          <QuotationMarks>"</QuotationMarks>
         </Quote>
       </QuoteWrapper>
       <PaintingsWrapper>

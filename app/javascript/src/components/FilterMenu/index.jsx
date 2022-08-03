@@ -4,8 +4,13 @@ import Select from "react-select";
 import FilterBy from "../FilterBy";
 
 const FilterWrapper = styled.div`
-  max-width: 23%;
   z-index: 2;
+  @media only screen and (max-width: 600px) {
+    max-width: 60%;
+  }
+  @media only screen and (min-width: 600px) {
+    max-width: 30%;
+  }
   @media only screen and (min-width: 1024px) {
     max-width: 19%;
   }
