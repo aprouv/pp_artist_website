@@ -59,7 +59,7 @@ const HomeLink = styled(Link)`
   }
 `;
 
-const HomeName = styled.h2`
+const HomeName = styled.h1`
   text-align: right;
   color: white;
   text-shadow: 3px 3px 13px black;
@@ -79,6 +79,15 @@ const HomeQuoteWrapper = styled.div`
     display: none;
   }
 `;
+
+const HomeSubtitle = styled.h2`
+  text-align: right;
+  color: white;
+  text-shadow: 3px 3px 13px black;
+  letter-spacing: 11px;
+  margin: 10px 30px;
+  font-weight: 400;
+`
 
 const Home = () => {
   return (
@@ -102,11 +111,14 @@ const Home = () => {
         />
       </HomeQuoteWrapper>
       <ImageContainer>
+        <div>
         <HomeName>
           Patricia
           <br />
           Prouvost
         </HomeName>
+        <HomeSubtitle>artiste peintre</HomeSubtitle>
+        </div>
         <NavlistWrapper>
           <HomeLink to="biographie">Biographie</HomeLink>
           <HomeLink to="tableaux">Tableaux</HomeLink>
