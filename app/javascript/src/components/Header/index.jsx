@@ -102,6 +102,12 @@ const PaintingsLink = styled.div`
   }
 `;
 
+const BurgerButton = styled.span`
+  @media only screen and (min-width: 768px) {
+    display: none;
+  }
+`;
+
 const Header = () => {
   const [isBurgerButtonClicked, setIsBurgerButtonClicked] = useState(false);
   const handleButtonClick = () => {
@@ -123,7 +129,7 @@ const Header = () => {
           </Link>
           <Name>Patricia Prouvost</Name>
         </HeaderLogo>
-        <span onClick={handleButtonClick}>{element}</span>
+        <BurgerButton onClick={handleButtonClick}>{element}</BurgerButton>
         <PaintingsLink>
           <StyledLink to="/contact">Contact</StyledLink>
           <StyledLink to="/livredor">Livre d'or</StyledLink>
