@@ -17,7 +17,7 @@ const OptionButton = styled.div`
   padding: 7px;
   @media only screen and (max-width: 600px) {
     margin: 6px;
-  font-size: 11px;
+    font-size: 11px;
     text-align: center;
   }
   &:hover {
@@ -43,8 +43,12 @@ const FilterBy = ({ option, paintings }) => {
   const distinctYears = [...new Set(paintings?.map((x) => x.year))].sort();
   const distinctFormats = noSortedFormats.sort(function (a, b) {
     let firstFormat = parseInt(a.substring(0, 3)),
-        secondFormat = parseInt(b.substring(0, 3));
-    return firstFormat == secondFormat ? 0 : firstFormat > secondFormat ? 1 : -1;
+      secondFormat = parseInt(b.substring(0, 3));
+    return firstFormat == secondFormat
+      ? 0
+      : firstFormat > secondFormat
+      ? 1
+      : -1;
   });
 
   return (
