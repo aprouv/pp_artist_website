@@ -3,7 +3,6 @@ import { screen, render } from "@testing-library/react";
 import Biography from "./";
 
 describe("the Biography page", () => {
-
   it("should display the biography text", () => {
     render(<Biography />);
     expect(screen.getByText(/Après 44 ans passés à Reims/)).toBeInTheDocument();
