@@ -2,7 +2,6 @@ import React from "react";
 import { MemoryRouter, Route, Routes } from "react-router-dom";
 import { screen, render, waitFor } from "@testing-library/react";
 import Home from "./";
-import Paintings from "../Paintings";
 import Contact from "../Contact";
 import Reviews from "../Reviews";
 import Biography from "../Biography";
