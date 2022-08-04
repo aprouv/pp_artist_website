@@ -19,7 +19,7 @@ const handlers = [
   rest.get("http://localhost/api/v1/reviews", (req, res, ctx) => {
     return res(ctx.status(200), ctx.json(reviewsMockedData));
   }),
-  rest.post("http://localhost:3000/api/v1/reviews", (req, res, ctx) => {
+  rest.post("http://localhost/api/v1/reviews", (req, res, ctx) => {
     return res(ctx.status(201), ctx.json(reviewMockedData));
   }),
 ];
