@@ -87,7 +87,7 @@ const HomeSubtitle = styled.h2`
   letter-spacing: 11px;
   margin: 10px 30px;
   font-weight: 400;
-`
+`;
 
 const Home = () => {
   return (
@@ -112,12 +112,12 @@ const Home = () => {
       </HomeQuoteWrapper>
       <ImageContainer>
         <div>
-        <HomeName>
-          Patricia
-          <br />
-          Prouvost
-        </HomeName>
-        <HomeSubtitle>artiste peintre</HomeSubtitle>
+          <HomeName>
+            Patricia
+            <br />
+            Prouvost
+          </HomeName>
+          <HomeSubtitle>artiste peintre</HomeSubtitle>
         </div>
         <NavlistWrapper>
           <HomeLink to="biographie">Biographie</HomeLink>
