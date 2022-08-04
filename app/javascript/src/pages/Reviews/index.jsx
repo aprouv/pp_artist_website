@@ -13,12 +13,10 @@ const ReviewContainer = styled.div`
 const ReviewTitle = styled.h1`
   margin-top: 0;
   padding-top: 3vh;
-  color: white;
 `;
 
 const ReviewSubtitle = styled.h4`
   font-weight: 200;
-  color: white;
 `;
 
 const AlertReviewAdded = styled.div`
