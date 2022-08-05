@@ -24,10 +24,9 @@ const SubmitButton = styled.button`
   padding: 2px 10px;
   color: white;
   margin-top: 3px;
-  background: black;
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
   cursor: pointer !important;
-  box-shadow: 1px 1px 2px 1px #888884;
   &:hover {
     opacity: 0.7;
   }

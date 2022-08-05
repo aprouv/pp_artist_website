@@ -42,7 +42,7 @@ const HomeLink = styled(Link)`
   color: white;
   width: 90px;
   padding: 9px 15px;
-  background: black;
+  background-color: rgba(0, 0, 0, 0.8);
   margin: 10px 0px;
   font-size: 19px;
   text-align: center;
@@ -70,7 +70,7 @@ const HomeName = styled.h1`
 `;
 
 const HomeQuoteWrapper = styled.div`
-  background: black;
+  background-color: rgba(0, 0, 0, 0.9);
   flex: 25%;
   max-height: 100vh;
   display: flex;
