@@ -11,9 +11,6 @@ const BioWrapper = styled.div`
     flex-wrap: wrap;
     flex: 1 1 100vw;
   }
-  @media only screen and (min-width: 1024px) {
-    align-items: center;
-  }
 `;
 
 const BioImage = styled.img`
@@ -41,10 +38,29 @@ const BioQuote = styled.p`
   font-weight: 500;
 `;
 
+const BioTitle = styled.h1`
+  font-weight: 400;
+  letter-spacing: 17.5px;
+  text-align: center;
+  font-size: 37px;
+  margin-bottom: 10px;
+`;
+
+const BioSubtitle = styled.h2`
+  letter-spacing: 5.5px;
+  font-weight: 300;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 40px;
+`;
+
 const Biography = () => {
   const name = "Patricia Prouvost";
   return (
     <div>
+      <BioTitle>Patricia Prouvost</BioTitle>
+      <BioSubtitle>Artiste peintre</BioSubtitle>
       <BioWrapper>
         <BioText>
           <p style={{ marginTop: 0 }}>
