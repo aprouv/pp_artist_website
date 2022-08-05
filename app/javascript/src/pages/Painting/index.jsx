@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import useFetch from "../../utils/hooks";
 import styled from "styled-components";
 
@@ -20,7 +20,10 @@ const PaintingImage = styled.img`
 const PaintingInfo = styled.div`
   width: 40%;
   text-align: center;
-  margin: auto 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
 const PaintingName = styled.h1`
@@ -67,6 +70,19 @@ const Arrow = styled.span`
   margin-left: 4px;
 `;
 
+const ContactLink = styled(Link)`
+  border: 1px solid lightgrey;
+  padding: 7px 11px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: grey;
+  margin: 18px auto;
+  &:hover {
+    background: black;
+    color: white;
+  }
+`;
+
 const Painting = () => {
   const { id: queryId } = useParams();
   const painting = useFetch(`/api/v1/paintings/${queryId}`);
@@ -93,6 +109,7 @@ const Painting = () => {
           </DescriptionButton>
         )}
         {isActive && <DescriptionText>{element?.description}</DescriptionText>}
+        <ContactLink to="/contact">Contacter Patricia Prouvost</ContactLink>
       </PaintingInfo>
     </PaintingWrapper>
   );
