@@ -19,12 +19,16 @@ const Textarea = styled.textarea`
   border: 1px solid lightgrey;
   border-radius: 5px;
   cursor: text !important;
-  width: 49vw;
-  margin: 15px auto;
+  width: 65vw;
+  margin-top: 10px;
+  @media only screen and (max-width: 600px) {
+    width: 59vw;
+    height: 22vh;
+  }
 `;
 
 const InputFields = styled.input`
-  margin: 15px auto;
+  margin-top: 10px;
   display: block;
   border: 1px solid lightgrey;
   border-radius: 5px;
@@ -35,11 +39,25 @@ const SubmitButton = styled.button`
   padding: 2px 10px;
   color: white;
   margin-top: 3px;
-  background: black;
+  background-color: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
   cursor: pointer !important;
   &:hover {
     opacity: 0.7;
+  }
+`;
+
+const ContactTitle = styled.h3`
+  margin-top: 0px;
+  font-weight: 400;
+  letter-spacing: 6.5px;
+  margin-top: 0;
+`;
+const ContactSubtitle = styled.h4`
+  font-weight: 100;
+  font-size: 14px;
+  @media only screen and (max-width: 600px) {
+    display: none;
   }
 `;
 
@@ -73,7 +91,12 @@ const ContactForm = () => {
 
   return (
     <FormContainer>
-      <h3 style={{ marginTop: 0 }}>Contactez Patricia Prouvost</h3>
+      <ContactTitle>Contactez Patricia Prouvost</ContactTitle>
+      <ContactSubtitle>
+        Pour toute question concernant un ou plusieurs tableaux, pour
+        acquisition ou pour toute demande d'exposition, vous pouvez me contacter
+        via le formulaire ci-dessous et je vous recontacte très rapidement.
+      </ContactSubtitle>
       <form onSubmit={onSubmit}>
         <div>
           <InputFields
@@ -93,7 +116,7 @@ const ContactForm = () => {
             onChange={handleChange}
           />
         </div>
-        <div>
+        <div style={{ textAlign: "left" }}>
           <Textarea
             name="message"
             placeholder="Votre message"
