@@ -7,7 +7,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import MenuList from "../MenuList/index.jsx";
 
-const element = <FontAwesomeIcon icon={faBars} size="2x" />;
+const burgerButton = <FontAwesomeIcon icon={faBars} size="2x" />;
 
 const NavContainer = styled.nav`
   display: flex;
@@ -17,6 +17,7 @@ const NavContainer = styled.nav`
   position: sticky;
   top: 0;
   background: white;
+  padding: 0 20px;
   z-index: 3;
   @media only screen and (max-width: 768px) {
     height: 14vh;
@@ -125,11 +126,11 @@ const Header = () => {
         </StaticLinks>
         <HeaderLogo>
           <Link to="/">
-            <Logo src={Pp} />
+            <Logo src={Pp} alt="home link" />
           </Link>
           <Name>Patricia Prouvost</Name>
         </HeaderLogo>
-        <BurgerButton onClick={handleButtonClick}>{element}</BurgerButton>
+        <BurgerButton onClick={handleButtonClick}>{burgerButton}</BurgerButton>
         <PaintingsLink>
           <StyledLink to="/contact">Contact</StyledLink>
           <StyledLink to="/livredor">Livre d'or</StyledLink>
