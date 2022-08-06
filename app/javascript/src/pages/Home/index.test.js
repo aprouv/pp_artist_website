@@ -10,7 +10,7 @@ import ReviewsTemplate from "../../components/ReviewsTemplate";
 import HomeTemplate from "../../components/HomeTemplate";
 import userEvent from "@testing-library/user-event";
 
-describe("the Biography page", () => {
+describe("the Home page", () => {
   it("should display the title (artist's name) and subtitle", () => {
     render(
       <MemoryRouter initialEntries={["/"]}>
@@ -30,7 +30,7 @@ describe("the Biography page", () => {
       <MemoryRouter initialEntries={["/"]}>
         <Routes>
           <Route path="" element={<PagesTemplate />}>
-            <Route path="tableaux" element={<p>Tableaux</p>} />
+            <Route path="tableaux" element={<p>Tous les tableaux</p>} />
             <Route path="biographie" element={<Biography />} />
             <Route path="contact" element={<Contact />} />
           </Route>
@@ -51,13 +51,20 @@ describe("the Biography page", () => {
       ).toBeInTheDocument();
     });
 
-    userEvent.click(screen.getByRole("link", { name: "Tableaux" }));
-
+    userEvent.click(screen.getByAltText("home link"));
     await waitFor(() => {
-      expect(screen.getByText(/Tableaux/)).toBeInTheDocument();
+      userEvent.click(screen.getByRole("link", { name: "Tableaux" }));
     });
 
-    userEvent.click(screen.getByRole("link", { name: "Contact" }));
+    await waitFor(() => {
+      expect(screen.getByText(/Tous les tableaux/)).toBeInTheDocument();
+    });
+
+    userEvent.click(screen.getByAltText("home link"));
+
+    await waitFor(() => {
+      userEvent.click(screen.getByRole("link", { name: "Contact" }));
+    });
 
     await waitFor(() => {
       expect(
@@ -65,7 +72,11 @@ describe("the Biography page", () => {
       ).toBeInTheDocument();
     });
 
-    userEvent.click(screen.getByRole("link", { name: "Livre d'or" }));
+    userEvent.click(screen.getByAltText("home link"));
+
+    await waitFor(() => {
+      userEvent.click(screen.getByRole("link", { name: "Livre d'or" }));
+    });
 
     await waitFor(() => {
       expect(screen.getByText(/Partagez ici publiquement/)).toBeInTheDocument();
