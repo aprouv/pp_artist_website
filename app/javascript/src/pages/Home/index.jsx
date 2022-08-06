@@ -6,7 +6,6 @@ import TypewriterEffect from "react-typewriter-effect";
 
 const Container = styled.div`
   display: flex;
-  min-height: 100vh;
   flex-wrap: wrap;
 `;
 
@@ -53,9 +52,8 @@ const HomeLink = styled(Link)`
     transition: 0.5s ease;
   }
   @media only screen and (max-width: 600px) {
-    width: 19vh;
-    padding: 15px 15px;
-    font-size: 27px;
+    padding: 10px 15px;
+    font-size: 17px;
   }
 `;
 
