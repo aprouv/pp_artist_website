@@ -7,7 +7,8 @@ const ReviewWrapper = styled.div`
   gap: 10px;
   justify-content: flex-start;
   word-break: break-word;
-  margin: 5vh 3vw;
+  margin: 5vh 3vw 0 3vw;
+  padding-bottom: 3vh;
 `;
 
 const ReviewCard = styled.div`
