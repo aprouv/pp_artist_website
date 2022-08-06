@@ -7,6 +7,8 @@ const PaintingWrapper = styled.div`
   display: flex;
   margin-top: 20px;
   justify-content: space-evenly;
+  flex-wrap: wrap;
+  min-height: 80vh;
 `;
 
 const PaintingImage = styled.img`
@@ -14,7 +16,6 @@ const PaintingImage = styled.img`
   max-height: 73vh;
   padding: 8px;
   border: thick double black;
-  margin-left: 3vh;
 `;
 
 const PaintingInfo = styled.div`
@@ -22,14 +23,15 @@ const PaintingInfo = styled.div`
   text-align: center;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
+   @media only screen and (max-width: 501px) {
+    width: 100%;
+  }
 `;
 
 const PaintingName = styled.h1`
   font-weight: 400;
-  margin-top: 0;
-  margin-bottom: 36px;
 `;
 
 const DescriptionText = styled.p`
@@ -42,8 +44,7 @@ const DescriptionButton = styled.h4`
   border-radius: 3px;
   font-weight: lighter;
   width: 53%;
-  margin: 0 auto;
-  margin-top: 40px;
+  margin: 18px auto;
   cursor: pointer;
   &:hover {
     opacity: 0.6;
