@@ -10,8 +10,8 @@ const FormContainer = styled.div`
   border: double thick;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 70vh;
+  justify-content: space-around;
+  min-height: 70vh;
 `;
 
 const Textarea = styled.textarea`
@@ -48,11 +48,12 @@ const SubmitButton = styled.button`
 `;
 
 const ContactTitle = styled.h3`
-  margin-top: 0px;
+  margin-bottom: 0;
   font-weight: 400;
   letter-spacing: 6.5px;
   margin-top: 0;
 `;
+
 const ContactSubtitle = styled.h4`
   font-weight: 100;
   font-size: 14px;
@@ -95,7 +96,7 @@ const ContactForm = () => {
       <ContactSubtitle>
         Pour toute question concernant un ou plusieurs tableaux, pour
         acquisition ou pour toute demande d'exposition, vous pouvez me contacter
-        via le formulaire ci-dessous et je vous recontacte très rapidement.
+        via le formulaire ci-dessous.
       </ContactSubtitle>
       <form onSubmit={onSubmit}>
         <div>
