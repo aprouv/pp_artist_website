@@ -25,7 +25,7 @@ const PaintingInfo = styled.div`
   align-items: center;
   justify-content: flex-start;
   flex-direction: column;
-   @media only screen and (max-width: 501px) {
+  @media only screen and (max-width: 501px) {
     width: 100%;
   }
 `;

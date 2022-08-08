@@ -3,8 +3,7 @@ import styled from "styled-components";
 
 const Textarea = styled.textarea`
   height: 20vh;
-  min-width: 60vw;
-  max-width: 100vw;
+  width: 80%;
   border: 1px solid lightgrey;
   border-radius: 5px;
   cursor: text !important;
@@ -21,9 +20,10 @@ const InputFields = styled.input`
 `;
 
 const SubmitButton = styled.button`
-  padding: 2px 10px;
+  padding: 4px 10px;
+  font-size: 15px;
   color: white;
-  margin-top: 3px;
+  margin-top: 10px;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
   cursor: pointer !important;

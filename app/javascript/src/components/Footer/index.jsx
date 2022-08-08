@@ -9,7 +9,7 @@ const backToTopArrow = <FontAwesomeIcon icon={faCircleArrowUp} size="2x" />;
 const FooterContainer = styled.div`
   background: black;
   color: white;
-  height: 27vh;
+  height: 25vh;
   position: relative;
 `;
 
@@ -22,8 +22,8 @@ const Copyright = styled.div`
 
 const BackToTopArrow = styled.div`
   position: absolute;
-  top: 8px;
-  right: 8px;
+  right: 10px;
+  bottom: 10px;
   cursor: pointer;
 `;
 

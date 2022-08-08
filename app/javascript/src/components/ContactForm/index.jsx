@@ -3,15 +3,17 @@ import { send } from "emailjs-com";
 import styled from "styled-components";
 
 const FormContainer = styled.div`
-  width: 70%;
+  width: 90%;
   margin: 20px auto;
   text-align: center;
   padding: 10px;
-  border: double thick;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   min-height: 70vh;
+  @media only screen and (min-width: 600px) {
+    width: 80%;
+  }
 `;
 
 const Textarea = styled.textarea`
@@ -22,7 +24,7 @@ const Textarea = styled.textarea`
   width: 65vw;
   margin-top: 10px;
   @media only screen and (max-width: 600px) {
-    width: 59vw;
+    width: 100%;
     height: 22vh;
   }
 `;
@@ -36,9 +38,10 @@ const InputFields = styled.input`
 `;
 
 const SubmitButton = styled.button`
-  padding: 2px 10px;
+  padding: 4px 10px;
+  font-size: 15px;
   color: white;
-  margin-top: 3px;
+  margin-top: 10px;
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 5px;
   cursor: pointer !important;
@@ -57,9 +60,6 @@ const ContactTitle = styled.h3`
 const ContactSubtitle = styled.h4`
   font-weight: 100;
   font-size: 14px;
-  @media only screen and (max-width: 600px) {
-    display: none;
-  }
 `;
 
 const ContactForm = () => {

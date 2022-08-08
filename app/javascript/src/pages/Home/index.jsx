@@ -17,7 +17,7 @@ const ImageContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-content: flex-end;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-end;
   @media only screen and (max-width: 600px) {
     align-items: center;
@@ -31,8 +31,7 @@ const NavlistWrapper = styled.div`
   margin: 10px 30px;
   @media only screen and (max-width: 600px) {
     align-items: center;
-    height: 60vh;
-    justify-content: space-evenly;
+    justify-content: space-around;
   }
 `;
 

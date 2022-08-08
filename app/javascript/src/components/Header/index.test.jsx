@@ -61,6 +61,5 @@ describe("the Header", () => {
     await waitFor(() => {
       expect(screen.getByText("home")).toBeInTheDocument();
     });
-
   });
 });

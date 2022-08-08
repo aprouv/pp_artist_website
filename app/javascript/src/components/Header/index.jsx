@@ -69,11 +69,11 @@ const Name = styled.div`
   padding-top: 2px;
   letter-spacing: 4.5px;
   border-top: 1px solid ${colors.tertiary};
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 600px) {
     display: none;
   }
-  @media only screen and (min-width: 768px) {
-    font-size: 9px;
+  @media only screen and (min-width: 600px) {
+    font-size: 8px;
   }
   @media only screen and (min-width: 1024px) {
     font-size: 15px;
@@ -88,7 +88,7 @@ const StaticLinks = styled.div`
   display: flex;
   justify-content: flex-end;
   padding-right: 20px;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 600px) {
     display: none;
   }
 `;
@@ -98,13 +98,13 @@ const PaintingsLink = styled.div`
   display: flex;
   justify-content: flex-start;
   padding-left: 20px;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 600px) {
     display: none;
   }
 `;
 
 const BurgerButton = styled.span`
-  @media only screen and (min-width: 768px) {
+  @media only screen and (min-width: 600px) {
     display: none;
   }
 `;
