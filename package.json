@@ -29,6 +29,8 @@
   },
   "version": "0.1.0",
   "scripts": {
+    "start": "react-scripts --openssl-legacy-provider start",
+    "build": "react-scripts --openssl-legacy-provider build",
     "test": "jest",
     "coverage": "jest --coverage"
   },
