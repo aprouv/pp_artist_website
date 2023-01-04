@@ -18,7 +18,6 @@
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.3.0",
     "react-select": "^5.4.0",
-    "react-scripts": "^5.0.1",
     "react-typewriter-effect": "^1.1.0",
     "styled-components": "^5.3.5",
     "turbolinks": "^5.2.0",
@@ -29,9 +28,11 @@
   },
   "version": "0.1.0",
   "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
     "test": "jest",
     "coverage": "jest --coverage"
+  },
+  "engines": {
+    "node": "16.15.1"
   },
   "devDependencies": {
     "@testing-library/dom": "^8.16.0",
