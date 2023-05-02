@@ -103,7 +103,7 @@ const Painting = () => {
         <PaintingName>{element?.name}</PaintingName>
         <PaintingDetails>{element?.year}</PaintingDetails>
         <PaintingDetails>{element?.format} cm</PaintingDetails>
-        <PaintingDetails>{element?.price} €</PaintingDetails>
+        {/* <PaintingDetails>{element?.price} €</PaintingDetails> */}
         {element?.description && (
           <DescriptionButton data-testid="description-button" onClick={onClick}>
             description <Arrow></Arrow>
