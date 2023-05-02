@@ -78,7 +78,7 @@ const customStyles = {
       ...provided["@media only screen and (max-width: 1200px)"],
       fontSize: "13px",
     },
-    "@media only screen and (min-width: 1250px)": {
+    "@media only screen and (min-width: 1300px)": {
       ...provided["@media only screen and (max-width: 1200px)"],
       fontSize: "17px",
     },
@@ -88,7 +88,7 @@ const customStyles = {
 const FilterMenu = ({ onChange, option, selectedOption, paintings }) => {
   const options = [
     { value: "all", label: "Tous les tableaux" },
-    { value: "price", label: "Prix" },
+    // { value: "price", label: "Prix" },
     { value: "format", label: "Format" },
     { value: "year", label: "Année" },
   ];

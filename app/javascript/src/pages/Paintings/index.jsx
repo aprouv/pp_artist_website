@@ -57,7 +57,7 @@ const Paintings = () => {
   let [searchParams] = useSearchParams();
   let year = searchParams.get("year");
   let format = searchParams.get("format");
-  let price = searchParams.get("price");
+  // let price = searchParams.get("price");
 
   return (
     <div style={{ margin: "0px" }}>
@@ -80,7 +80,7 @@ const Paintings = () => {
           year={year}
           option={option}
           format={format}
-          price={price}
+          // price={price}
         />
       </PaintingsWrapper>
     </div>
