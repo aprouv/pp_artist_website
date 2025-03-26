@@ -63,6 +63,10 @@ const ContactSubtitle = styled.h4`
 `;
 
 const ContactForm = () => {
+  const emailJsApiKey = process.env.REACT_APP_EMAILJS_PUBLIC_KEY;
+  const emailJsTemplateId = process.env.REACT_APP_EMAILJS_TEMPLATE_ID;
+  const emailJsServiceId = process.env.REACT_APP_EMAILJS_SERVICE_ID;
+
   const [toSend, setToSend] = useState({
     from_name: "",
     message: "",
@@ -71,7 +75,7 @@ const ContactForm = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    send("service_g60awki", "template_it7mcqn", toSend, "lakoPxXe2V4dxxUUo")
+    send(emailJsServiceId, emailJsTemplateId, toSend, emailJsApiKey)
       .then((response) => {
         console.log("SUCCESS", response.status, response.text);
         alert("Votre message a bien été envoyé à Patricia Prouvost");
